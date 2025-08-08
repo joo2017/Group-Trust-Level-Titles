@@ -1,0 +1,9 @@
+plugins:
+  add_title_based_on_trust_level_enabled:
+    default: true
+    client: true
+  group_based_title_rules:
+    default: ""
+    type: list
+    list_type: simple
+    description: "为不同的用户组和信任级别设置头衔规则。格式为：group_name|tl1_title|tl2_title|tl3_title|tl4_title"
