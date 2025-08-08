@@ -1,0 +1,4 @@
+en:
+  site_settings:
+    group_based_title_rules: "在这里设置基于用户组的头衔规则"
+    add_title_based_on_trust_level_enabled: "启用基于用户组和信任级别的自动头衔"
