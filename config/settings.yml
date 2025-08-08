@@ -1,8 +1,8 @@
 plugins:
-  add_title_based_on_trust_level_enabled:
+  group_based_titles_enabled:
     default: true
     client: true
-  group_based_title_rules:
+  group_based_titles_rules:
     default: ""
     type: list
     list_type: simple
