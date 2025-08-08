@@ -3,4 +3,4 @@ en:
     admin:
       site_settings:
         categories:
-          group_based_titles: "Group & Trust Level Titles"
+          group_based_titles: "group-based-titles"
