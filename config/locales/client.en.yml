@@ -1,0 +1,6 @@
+en:
+  admin_js:
+    admin:
+      site_settings:
+        categories:
+          add_title_based_on_trust_level: "Group & Trust Level Titles"
