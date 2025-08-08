@@ -6,7 +6,7 @@
 # authors: Your Name
 # url: TODO
 
-enabled_site_setting :add_title_based_on_trust_level_enabled
+enabled_site_setting :group_based_titles_enabled
 
 module ::GroupBasedTitles
   PLUGIN_NAME = "group-based-titles"
@@ -16,6 +16,9 @@ module ::GroupBasedTitles
       # 确保用户对象存在
       return if user.blank?
 
+      # 检查插件是否启用
+      return unless SiteSetting.group_based_titles_enabled
+
       # 获取用户的主要用户组和信任级别
       primary_group = user.primary_group
       trust_level = user.trust_level
@@ -24,7 +27,9 @@ module ::GroupBasedTitles
       return if primary_group.blank?
 
       # 解析设置中的规则
-      rules = SiteSetting.group_based_title_rules.split("\n").map(&:strip).reject(&:blank?)
+      # SiteSetting.group_based_titles_rules 的值已经是被解析好的数组，直接使用
+      rules = SiteSetting.group_based_titles_rules
+      return if rules.blank?
       
       # 查找与用户当前主要用户组匹配的规则
       # 规则格式: group_name|tl1_title|tl2_title|tl3_title|tl4_title
