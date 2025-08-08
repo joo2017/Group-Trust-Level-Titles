@@ -1,0 +1,4 @@
+en:
+  site_settings:
+    group_based_titles_enabled: "Enable automatic titles based on group and trust level."
+    group_based_titles_rules: "Define title rules here. Each rule on a new line. Format: group_name|tl1_title|tl2_title|tl3_title|tl4_title"
